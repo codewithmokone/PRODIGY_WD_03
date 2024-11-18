@@ -4,6 +4,7 @@ const playerInstr = document.getElementById("player-instruction");
 const score = document.getElementById("score");
 const cells = document.getElementsByClassName("cell");
 const endMessage = document.getElementById("textMessage");
+const playAgainBtn = document.getElementById("playAgain");
 endMessage.innerText = `X's turn!`;
 endMessage.style.textAlign = "center";
 
@@ -33,12 +34,12 @@ for (let i = 0; i < cells.length; i++) {
 
     cells[i].innerText = currentPlayer;
 
-    gameInstr.classList.add("hidden");
-    playerInstr.classList.add("hidden");
+    gameInstr.classList.add('hidden');
+    playerInstr.classList.add('hidden');
 
     if (winStatus(currentPlayer)) {
       endMessage.innerText = `Game over! Player ${currentPlayer} wins!`;
-
+      playAgainBtn.classList.remove('hidden')
       if (currentPlayer == players[0]) {
         playerXScore = playerXScore + 1;
       } else {
@@ -76,6 +77,7 @@ const winStatus = () => {
     ) {
       return true;
     }
+
   }
   return false;
 }
@@ -107,6 +109,7 @@ const resetButton = () => {
   }
   endMessage.innerText = "X's turn";
   currentPlayer = players[0];
+  score.innerText = "";
   gameOver = false;
 };
 
