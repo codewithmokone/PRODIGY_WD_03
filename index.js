@@ -108,6 +108,8 @@ const resetButton = () => {
     cells[i].innerText = "";
   }
   endMessage.innerText = "X's turn";
+  gameInstr.classList.remove('hidden');
+  playerInstr.classList.remove('hidden');
   currentPlayer = players[0];
   score.innerText = "";
   gameOver = false;
