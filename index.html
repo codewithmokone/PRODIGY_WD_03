@@ -1,32 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- External links -->
     <script defer src="script.js"></script>
-    <link rel="stylesheet" href="styles.css" >
+    <link rel="stylesheet" href="styles.css" />
     <title>Tic-Tac-Toe</title>
   </head>
   <body>
     <div class="container">
       <header>
         <h1>TIC TAC TOE</h1>
-        <div id="instructions">
+        <section id="instructions">
           <p id="game-instruction">Game starts by just Tap on the box</p>
-          <p id="player-instruction">First Player starts as Player X and Second player as Player 0</p>
-        </div>
-        <div>
-            <p id="score">0</p>
-        </div>
+          <p id="player-instruction">
+            First Player starts as Player X and Second player as Player 0
+          </p>
+        </section>
+        <section>
+          <p id="score"></p>
+        </section>
       </header>
       <main>
-        <div>
+        <section>
           <h3 id="textMessage">Player turn</h3>
-        </div>
-        <div class="ui">
+        </section>
+        <section class="ui">
           <div class="row">
-            <div id="b0" class="cell" ></div>
+            <div id="b0" class="cell"></div>
             <div id="b1" class="cell"></div>
             <div id="b2" class="cell"></div>
           </div>
@@ -40,11 +42,11 @@
             <div id="b7" class="cell"></div>
             <div id="b8" class="cell"></div>
           </div>
-        </div>
-        <div class="game-btns">
+        </section>
+        <section class="game-btns">
           <button id="reset">RESET</button>
           <button id="playAgain" class="hidden">PLAY AGAIN</button>
-        </div>
+        </section>
       </main>
       <footer></footer>
     </div>
